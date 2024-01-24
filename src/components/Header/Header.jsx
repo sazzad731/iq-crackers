@@ -11,7 +11,7 @@ const Header = () =>
     { id: 3, name: "Blog", path: "/blog" },
   ];
   return (
-    <header className="w-full px-2 sticky top-0 shadow-xl shadow-indigo-100">
+    <header className="w-full px-2 mb-20 top-0 shadow-xl shadow-indigo-100">
       <nav className="flex items-center justify-between w-full max-w-7xl mx-auto py-4">
         {/* logo section */}
         <div>
