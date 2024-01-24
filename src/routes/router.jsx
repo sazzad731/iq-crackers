@@ -26,6 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/staitistics",
+        loader: ()=>fetch("https://openapi.programming-hero.com/api/quiz"),
         element: <Statistics/>
       },
       {
