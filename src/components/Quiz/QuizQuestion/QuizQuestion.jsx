@@ -4,7 +4,7 @@ import { OpenDialogContext } from "../Quiz";
 
 const QuizQuestion = ({ quizData, questionNo, addQuestion }) => {
   const { question, correctAnswer, options } = quizData;
-  const [active, setActive] = useState("Active");
+  const [active, setActive] = useState("");
   const openDialog = useContext(OpenDialogContext);
 
   // console.log(correctAnswer);
@@ -29,8 +29,8 @@ const QuizQuestion = ({ quizData, questionNo, addQuestion }) => {
             <div
               onClick={() => setActive(opt)}
               className={`p-10 border border-indigo-600 rounded-lg cursor-pointer text-lg text-indigo-600 ${
-                active === opt ? "bg-indigo-600 text-white" : ""
-              }`}
+                active === correctAnswer && active === opt ? "bg-green-600 text-white" : ""
+              } ${active !== correctAnswer && active === opt?"bg-red-600 text-white":""}`}
               key={ind}
             >
               <p>{opt}</p>
