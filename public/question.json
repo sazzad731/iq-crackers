@@ -1,0 +1,17 @@
+[
+  {
+    "id": "65b186cbcd4705b966597714",
+    "question": "What is the purpose of react router",
+    "ans": "React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.\r\n"
+  },
+  {
+    "id": "65b186cbc7a718e21424e84c",
+    "question": "How dose context api works in react",
+    "ans": "React.createContext() is all you need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the \"store\" and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state. More information can be found on React's documentation page.\r\n"
+  },
+  {
+    "id": "65b186cb3cbd24364d8701db",
+    "question": "What is useRef in react and why does it use",
+    "ans": "useRef is a React Hook that lets you reference a value that's not needed for rendering.The useRef Hook allows you to persist values between renders. It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.\r\n"
+  }
+]

@@ -31,6 +31,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blog",
+        loader: ()=>{
+          return fetch("question.json");
+        },
         element: <Blog/>
       }
     ],

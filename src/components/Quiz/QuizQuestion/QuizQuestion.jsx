@@ -10,9 +10,9 @@ const QuizQuestion = ({ quizData, questionNo, addQuestion }) => {
   // console.log(correctAnswer);
 
   return (
-    <div className="mb-12 shadow-2xl py-10 px-14 rounded-lg w-full max-w-4xl">
+    <div className="mb-12 shadow-2xl sm:py-10 sm:px-14 py-2 px-2 rounded-lg w-full max-w-4xl">
       <div className="relative">
-        <p className=" w-11/12 text-2xl text-justify font-medium text-indigo-600 mb-5">
+        <p className=" w-11/12 md:text-2xl text-xl text-justify font-medium text-indigo-600 mb-5">
           Quiz {questionNo}: {question}
         </p>
         <EyeIcon
@@ -20,7 +20,7 @@ const QuizQuestion = ({ quizData, questionNo, addQuestion }) => {
             openDialog(true);
             addQuestion(question, questionNo, correctAnswer);
           }}
-          className="w-7 h-7 text-indigo-600 cursor-pointer absolute top-0 right-0"
+          className="w-7 h-7 text-indigo-600 cursor-pointer absolute bottom-0 md:top-0 right-0"
         />
       </div>
       <div className="grid md:grid-cols-2 gap-5">

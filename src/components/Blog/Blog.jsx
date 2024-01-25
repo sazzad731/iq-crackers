@@ -1,8 +1,13 @@
+import { useLoaderData } from "react-router-dom";
+import Collapse from "./Collapse/Collapse";
 
-const Blog = () => {
+const Blog = () =>{
+  const data = useLoaderData();
   return (
     <div>
-      <h1>This is Blog Components</h1>
+      {
+        data.map(collapse=> <Collapse coldata={collapse} key={collapse.id}/>)
+      }
     </div>
   );
 };

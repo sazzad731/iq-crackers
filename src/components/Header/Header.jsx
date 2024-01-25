@@ -21,11 +21,9 @@ const Header = () =>
         </div>
 
         {/* nav link */}
-        <div
-          className={`flex flex-col gap-6 md:flex-row items-center justify-between md:static absolute top-20 ${active?"right-0":"right-[-300px]"} md:p-0 py-10 px-20 md:bg-opacity-0 bg-indigo-600 md:text-indigo-400 text-white md:rounded-none rounded-lg`}
-        >
+        <div className={`flex flex-col gap-6 md:flex-row items-center justify-between md:static absolute right-0 ${active?"top-20":"top-[-300px]"} md:p-0 py-10 px-20 md:bg-opacity-0 bg-indigo-600 md:text-indigo-400 text-white font-bold text-xl md:rounded-none rounded-lg z-50`}>
           {
-            headerLink.map(link => <NavLink className="font-bold text-xl" to={link.path} key={link.id}>{link.name}</NavLink>)
+            headerLink.map(link => <NavLink className={({isActive})=>isActive &&"md:text-indigo-600"} to={link.path} key={link.id}>{link.name}</NavLink>)
           }
         </div>
         <div onClick={() => setActive(!active)} className="md:hidden h-7 w-7 text-indigo-600">
